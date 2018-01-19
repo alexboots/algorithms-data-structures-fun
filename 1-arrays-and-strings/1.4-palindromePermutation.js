@@ -1,9 +1,8 @@
-// Given a string of letters, can it be made into a palindrome.
+// Given a string of letters, is it be made into a palindrome.
 
-// String check methods - placed in an object for readbility
-const checkString = {
+const palindromeChecks = {
   // return the total number of times a letter appears in the string
-  countLetters: function(array, letter, accumulator = 0) {
+  countLetters: function (array, letter, accumulator = 0) {
     const letterIndex = array.indexOf(letter)
     const newArray = array.slice(letterIndex + 1)
 
@@ -40,15 +39,14 @@ const checkForValidString = (array) => {
 
 
   letters.forEach((letter) => {
-    lettersCounted[`${letter}`] = checkString.countLetters(array, letter)
+    lettersCounted[`${letter}`] = palindromeChecks.countLetters(array, letter)
   })
 
-  return checkString.stringHasZeroOrOneUnevenLetter(lettersCounted)
+  return palindromeChecks.stringHasZeroOrOneUnevenLetter(lettersCounted)
 }
 
-export function palindromePermuation(string) {
+export function palindromePermutation(string) {
   let palindromable = false
-  // get rid of spaces and 
   
   const arrayOfLetters = string.toLowerCase().replace(/[^a-z$]/g, '').split('')
   
