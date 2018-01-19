@@ -8,6 +8,8 @@ import { palindromes } from './1-arrays-and-strings/test-data'
 
 /* Arrays and Strings */
 /* ------------------ */
+// problems:  p102
+// solutions: p205
 
 // // _ 1.1 _______
 // console.log('isUnique | true', isUnique('abcdefh'));
@@ -33,10 +35,13 @@ import { palindromes } from './1-arrays-and-strings/test-data'
 
 // _ 1.5 _______
 
-[['pale', 'ple'],
- ['pales', 'pale'],
- ['pale', 'bale'],
- ['pale', 'bake']].forEach((words) => {
+[
+  ['appple', 'aple'],
+  ['pale', 'ple'],
+  ['pales', 'pale'],
+  ['pale', 'bale'],
+  ['pale', 'bake']
+].forEach((words) => {
   console.log('words', words);
   console.log(checkEditCount(words[0], words[1]));
 })
