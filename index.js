@@ -1,10 +1,13 @@
+// Test data
+import { palindromes, editCheckStrings } from './1-arrays-and-strings/test-data'
+
 import { isUnique } from './1-arrays-and-strings/1.1-isUnique'
 import { isPermutation } from './1-arrays-and-strings/1.2-isPermutation'
 import { URLify } from './1-arrays-and-strings/1.3-URLify'
 import { palindromePermutation } from './1-arrays-and-strings/1.4-palindromePermutation'
 import { checkEditCount } from './1-arrays-and-strings/1.5-checkEditCount'
+import { stringCompression } from './1-arrays-and-strings/1.6-stringCompression'
 
-import { palindromes } from './1-arrays-and-strings/test-data'
 
 /* Arrays and Strings */
 /* ------------------ */
@@ -35,14 +38,9 @@ import { palindromes } from './1-arrays-and-strings/test-data'
 
 // _ 1.5 _______
 
-[
-  ['appple', 'aple'],
-  ['pale', 'ple'],
-  ['pales', 'pale'],
-  ['pale', 'bale'],
-  ['pale', 'bake']
-].forEach((words) => {
+editCheckStrings.forEach((words) => {
   console.log('words', words);
   console.log(checkEditCount(words[0], words[1]));
 })
 
+// _ 1.6 _______

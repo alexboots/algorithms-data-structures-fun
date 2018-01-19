@@ -37,3 +37,12 @@ export const palindromes = [
   'As I pee, sir, I see Pisa!',
   'Avid diva.'
 ]
+
+export const editCheckStrings = [
+  ['appple', 'aple'], // false
+  ['pale', 'bales'],  // false
+  ['pale', 'bake'],   // false
+  ['pale', 'ple'],    // true
+  ['pales', 'pale'],  // true
+  ['pale', 'bale'],   // true
+]

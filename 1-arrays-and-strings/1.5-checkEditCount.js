@@ -29,8 +29,11 @@ const checkForLetterDifferences = (string1, string2) => {
   const string2Array = string2.split('')
   const differentLetters = []
 
-  string1Array.forEach((letter, index) => {
-    if(!string2Array.includes(letter)) {
+  const longerStrong  = string1Array.length > string2Array.length ? string1Array : string2Array
+  const shorterString = string1Array.length > string2Array.length ? string2Array : string1Array
+
+  longerStrong.forEach((letter, index) => {
+    if(!shorterString.includes(letter)) {
       differentLetters.push(letter)
     }
   })
