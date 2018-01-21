@@ -47,8 +47,22 @@ export const editCheckStrings = [
   ['pale', 'bale'],   // true
 ]
 
-export const pixelArray = [
+export const pixelArray_3x3 = [
   [1,2,3],
   [4,5,6],
   [7,8,9]
+]
+
+export const pixelArray_4x4 = [
+  ['a', 'b', 'c', 'd'],
+  ['e', 'f', 'g', 'h'],
+  ['i', 'j', 'k', 'l'],
+  ['m', 'n', 'p', 'q']
+]
+
+export const pixelArray_5x5 = [
+  ['a', 'b', 'c', 'd', 'e'],
+  ['f', 'g', 'h', 'i', 'j'],
+  ['k', 'l', 'm', 'n', 'o'],
+  ['p', 'q', 'r', 's', 't']
 ]

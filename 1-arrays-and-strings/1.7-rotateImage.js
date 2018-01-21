@@ -24,42 +24,83 @@
 //   [m,i,e,a],
 //   [n,j,f,b],
 //   [p,k,g,c]
-//   [q,n,h,d]
+//   [q,l,h,d]
 // ]
 
 // Position math: 
-/* 
+// shift by (width - 1)
+// difference between shifts is (width - 1)
+// 2
+// 4
+// 6
 
-// first row
-(width - 1) * ((rowIndex * colIndex) + 1)
+// 7
+// 9
+// 11
 
-// second row 
-(width - 1) * (((rowIndex * colIndex) + 1) - 1)
+// 12
+// 14
+// 16
 
-// third row
-(width - 1) * (((rowIndex * colIndex) + 1) - 2)
+// --
+// 3
+// 6
+// 9
+// 12
 
-// third row
-(width - 1) * (((rowIndex * colIndex) + 1) - 3)
+// 14
+//
+//
+//
+// --
 
-*/
+
+const calculateCellPosition = (value, matrixCellCount) => {
+  if(value >= matrixCellCount) {
+    return calculateCellPosition(value - matrixCellCount, matrixCellCount)
+  } else {
+    return value
+  }
+}
+
+const getRowAndCell = (newCellPosition, matrixWidth, row=0) => {
+  if(newCellPosition > matrixWidth - 1) {
+    return getRowAndCell(newCellPosition - matrixWidth, matrixWidth, row += 1)
+  } else {
+    return [row, newCellPosition]
+  }
+}
 
 export const rotateImage = (pixelMatrix) => {
-  const arrayWidth =  pixelMatrix[0].length 
-  const arrayValuesCount = arrayWidth * arrayWidth
+  const matrixWidth =  pixelMatrix[0].length 
+  const matrixCellCount = matrixWidth * matrixWidth
+  let count = 0
+  const increment = matrixWidth - 1
+  const rotatedMatrix = [...Array(matrixWidth)].map(() => [...Array(matrixWidth)])
 
-  const rotatedMatrix = []
+  let newCellPosition
+  let rowAndCell
+
+  let currentPosition = 0
+  let shiftCellBy = increment
+  let newRowShift = Math.floor(matrixWidth / 2)
 
   pixelMatrix.forEach((row, rowIndex) => {
-    rotatedMatrix[rowIndex] = []
     row.forEach((pixel, colIndex) =>  {
+      newCellPosition = calculateCellPosition(currentPosition + shiftCellBy, matrixCellCount)
 
-      const newPosition = (Math.abs((arrayWidth - 1)) * ((rowIndex * colIndex + 1)) - (rowIndex + 1))
-        console.log('newPosition', newPosition);
-      // rotatedMatrix[rowIndex][colIndex] = pixel
+      rowAndCell = getRowAndCell(newCellPosition, matrixWidth)
+      rotatedMatrix[rowAndCell[0]][rowAndCell[1]] = pixel
+
+      if(colIndex + 1 === matrixWidth) {
+        shiftCellBy += newRowShift
+      } else {
+        shiftCellBy += increment
+      }
+
+      currentPosition += 1
     })
   })
-
 
   return rotatedMatrix
 }
