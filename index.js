@@ -1,5 +1,12 @@
 // Test data
-import { palindromes, editCheckStrings, pixelArray } from './1-arrays-and-strings/test-data'
+import { 
+  palindromes, 
+  editCheckStrings, 
+  pixelArray_3x3, 
+  pixelArray_4x4,
+  pixelArray_5x5,
+  pixelArray_6x6
+} from './1-arrays-and-strings/test-data'
 
 import { isUnique } from './1-arrays-and-strings/1.1-isUnique'
 import { isPermutation } from './1-arrays-and-strings/1.2-isPermutation'
@@ -8,6 +15,7 @@ import { palindromePermutation } from './1-arrays-and-strings/1.4-palindromePerm
 import { checkEditCount } from './1-arrays-and-strings/1.5-checkEditCount'
 import { stringCompression } from './1-arrays-and-strings/1.6-stringCompression'
 import { rotateImage } from './1-arrays-and-strings/1.7-rotateImage'
+import { isRotation } from './1-arrays-and-strings/1.9-isRotation'
 
 /* Arrays and Strings */
 /* ------------------ */
@@ -48,4 +56,14 @@ import { rotateImage } from './1-arrays-and-strings/1.7-rotateImage'
 
 // _ 1.6 _______
 
-console.log(rotateImage(pixelArray))
+// console.log(rotateImage(pixelArray_3x3));
+// console.log(rotateImage(pixelArray_4x4));
+// console.log(rotateImage(pixelArray_5x5));
+// console.log(rotateImage(pixelArray_6x6));
+
+// _ 1.9 _______
+
+console.log(isRotation('waterbottle', 'erbottlewat'));
+console.log(isRotation('waterbottle', 'erbotlewatt'));
+console.log(isRotation('aaata', 'aataa'));
+console.log(isRotation('hello', 'heelo'));

@@ -84,7 +84,6 @@ export const rotateImage = (pixelMatrix) => {
   let currentPosition = 0
   let shiftCellBy = increment
   let newRowShift = matrixWidth - 2
-  console.log('newRowShift', newRowShift)
 
   pixelMatrix.forEach((row, rowIndex) => {
     row.forEach((pixel, colIndex) =>  {
