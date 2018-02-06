@@ -8,6 +8,11 @@ import {
   pixelArray_6x6
 } from './1-arrays-and-strings/test-data'
 
+import { numbersArray } from './search-stuff/test-data'
+
+
+// Chapter 1 
+
 import { isUnique } from './1-arrays-and-strings/1.1-isUnique'
 import { isPermutation } from './1-arrays-and-strings/1.2-isPermutation'
 import { URLify } from './1-arrays-and-strings/1.3-URLify'
@@ -16,6 +21,9 @@ import { checkEditCount } from './1-arrays-and-strings/1.5-checkEditCount'
 import { stringCompression } from './1-arrays-and-strings/1.6-stringCompression'
 import { rotateImage } from './1-arrays-and-strings/1.7-rotateImage'
 import { isRotation } from './1-arrays-and-strings/1.9-isRotation'
+
+// Trying stuff
+import { binarySearch } from './search-stuff/binarySearch'
 
 /* Arrays and Strings */
 /* ------------------ */
@@ -63,7 +71,11 @@ import { isRotation } from './1-arrays-and-strings/1.9-isRotation'
 
 // _ 1.9 _______
 
-console.log(isRotation('waterbottle', 'erbottlewat'));
-console.log(isRotation('waterbottle', 'erbotlewatt'));
-console.log(isRotation('aaata', 'aataa'));
-console.log(isRotation('hello', 'heelo'));
+// console.log(isRotation('waterbottle', 'erbottlewat'));
+// console.log(isRotation('waterbottle', 'erbotlewatt'));
+// console.log(isRotation('aaata', 'aataa'));
+// console.log(isRotation('hello', 'heelo'));
+
+
+// Trying stuff
+// console.log(binarySearch(numbersArray, 3))
