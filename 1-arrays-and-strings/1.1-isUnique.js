@@ -18,7 +18,7 @@ export function isUnique(string) {
 */
 
 // 'oh snap es6 introduced sets' solution
-export function isUnique(string) {
+export function isUnique_usingSet(string) {
   let set = new Set(string)
   return set.size === string.length
 }
