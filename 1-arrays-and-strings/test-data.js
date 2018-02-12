@@ -39,12 +39,28 @@ export const palindromes = [
 ]
 
 export const editCheckStrings = [
-  ['appple', 'aple'], // false
-  ['pale', 'bales'],  // false
-  ['pale', 'bake'],   // false
-  ['pale', 'ple'],    // true
-  ['pales', 'pale'],  // true
-  ['pale', 'bale'],   // true
+  // 10 true
+  ['abcdef', 'abcdef'],
+  ['acd', 'acd'],
+  ['pale', 'ple'],
+  ['pales', 'pale'],  
+  ['pale', 'bale'],   
+  ['pale', 'pxle'],  
+  ['pale', 'pate'], 
+  ['pale', 'pald'],  
+  ['answers', 'answer'], 
+  ['technology', 'etechnology'], 
+   // 10 false
+  ['pale', 'pl'], 
+  ['paless', 'pale'], 
+  ['abcdefghiz', 'ihgfedcbaa'], 
+  ['1122334455667788', '9911223344556677'], 
+  ['abcd', 'dcba'], 
+  ['appple', 'aple'], 
+  ['pale', 'bake'],   
+  ['world', 'worfg'], 
+  ['45678', '1239'], 
+  ['pale', 'bales'],  
 ]
 
 export const pixelArray_3x3 = [
