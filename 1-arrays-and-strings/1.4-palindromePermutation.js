@@ -52,3 +52,31 @@ export function palindromePermutation(string) {
   
   return checkForValidString(arrayOfLetters)
 }
+
+// Less complicated solution
+export function simpler_palindromePermutation(string) {
+  let palindromable = true
+  let oddCountFound = false
+  const arrayOfLetters = string.toLowerCase().replace(/[^a-z$]/g, '').split('')
+  const letterCount = {}
+
+  arrayOfLetters.forEach((letter) => {
+    if(letterCount[letter] === undefined) {
+      letterCount[letter] = 1
+    } else {
+      letterCount[letter]++
+    }
+  })
+
+  for(let letter in letterCount) {
+    if(letterCount[letter] % 2 !== 0) {
+      if(!oddCountFound) {
+          oddCountFound
+      } else {
+        palindromable = false
+      }
+    }
+  }
+
+  return palindromable
+}

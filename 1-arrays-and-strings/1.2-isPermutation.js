@@ -7,3 +7,10 @@ export function isPermutation(stringOne, stringTwo) {
     return twoSorted[index] === letter ? true : false
   })
 }
+
+export function isPermutation_sort(stringOne, stringTwo) {
+  const oneSorted = stringOne.split('').sort().join('')
+  const twoSorted = stringTwo.split('').sort().join('')
+
+  return oneSorted === twoSorted
+}

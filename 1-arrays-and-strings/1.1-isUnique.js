@@ -14,7 +14,12 @@ export function isUnique(string) {
 }
 
 /* 
-
   Time complexity is 0(n) where n is the lengh of the string.
-  
 */
+
+// 'oh snap es6 introduced sets' solution
+export function isUnique(string) {
+  let set = new Set(string)
+  return set.size === string.length
+}
+
