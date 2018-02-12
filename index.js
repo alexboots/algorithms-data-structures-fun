@@ -19,7 +19,7 @@ import { URLify } from './1-arrays-and-strings/1.3-URLify'
 import { palindromePermutation, simpler_palindromePermutation } from './1-arrays-and-strings/1.4-palindromePermutation'
 import { checkEditCount, checkEditCount_efficient } from './1-arrays-and-strings/1.5-checkEditCount'
 import { stringCompression } from './1-arrays-and-strings/1.6-stringCompression'
-import { rotateImage } from './1-arrays-and-strings/1.7-rotateImage'
+import { rotateImage, rotateImage_book } from './1-arrays-and-strings/1.7-rotateImage'
 import { isRotation } from './1-arrays-and-strings/1.9-isRotation'
 
 // Trying stuff
@@ -74,6 +74,12 @@ import { binarySearch } from './search-stuff/binarySearch'
 // console.log(rotateImage(pixelArray_4x4));
 // console.log(rotateImage(pixelArray_5x5));
 // console.log(rotateImage(pixelArray_6x6));
+
+console.log(rotateImage_book(pixelArray_3x3));
+console.log(rotateImage_book(pixelArray_4x4));
+console.log(rotateImage_book(pixelArray_5x5));
+console.log(rotateImage_book(pixelArray_6x6));
+
 
 // _ 1.9 _______
 

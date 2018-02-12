@@ -104,3 +104,36 @@ export const rotateImage = (pixelMatrix) => {
 
   return rotatedMatrix
 }
+
+
+// easier to read code++
+export const rotateImage_book = (matrix) => {
+  if(matrix.length === 0 || matrix.length !== matrix[0].length) { return 'why are you even trying to fool give me some gosh darn data this is preposterous'}
+
+  let edge = matrix.length
+
+  for(let layer = 0; layer < Math.floor(edge / 2); layer++) {
+    let first = layer
+    let last = edge - 1 - layer
+
+    for(let i = first; i < last; i++) {
+      let offset = i - first
+      let top = matrix[first][i] // save top
+
+      // left => top
+      matrix[first][i] = matrix[last - offset][first]
+
+      // bottom => left 
+      matrix[last - offset][first] = matrix[last][last - offset]
+
+      // right => bottom
+      matrix[last][last - offset] = matrix[i][last]
+
+      // top => right
+      matrix[i][last] = top // right = saved top
+    }
+  }
+  
+
+  return matrix
+}

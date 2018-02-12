@@ -17,7 +17,7 @@ export function isUnique(string) {
   Time complexity is 0(n) where n is the lengh of the string.
 */
 
-// 'oh snap es6 introduced sets' solution
+// 'oh snap es6 introduced sets' solution (much faster÷)
 export function isUnique_usingSet(string) {
   let set = new Set(string)
   return set.size === string.length
