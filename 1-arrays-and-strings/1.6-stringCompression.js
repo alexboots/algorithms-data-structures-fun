@@ -3,21 +3,19 @@
 
 export const stringCompression = (string) => {
   const letterCount = {}
-  const letters = []
   let compressedString = ''
 
   string.split('').forEach((letter) => {
-    if(!letters.includes(letter)) {
-      letters.push(letter)
-      letterCount[`${letter}`] = 1
+    if(letterCount[letter])  {
+      letterCount[letter]++
     } else {
-      letterCount[`${letter}`] += 1
+      letterCount[letter] = 1
     }
   })
 
-  letters.forEach((letter) => {
+  for(let letter in letterCount) {
     compressedString += letter + letterCount[letter]
-  })
+  }
 
   return compressedString.length > string.length ? string : compressedString
 }

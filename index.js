@@ -60,10 +60,10 @@ import { binarySearch } from './search-stuff/binarySearch'
 // })
 
 // _ 1.5 _______
-editCheckStrings.forEach((words) => {
-  // console.log('words', words);
-  console.log(checkEditCount_efficient(words[0], words[1]));
-})
+// editCheckStrings.forEach((words) => {
+//   // console.log('words', words);
+//   console.log(checkEditCount_efficient(words[0], words[1]));
+// })
 
 // _ 1.6 _______
 // console.log(stringCompression('hellllllllo'))
