@@ -1,17 +1,10 @@
+ 
 // using only one call to isSubstring
-
-
+// rotation = if string is 'rotated' around a beginning or end. 
 export const isRotation = (str1, str2) => {
-  const arr1 = str1.split('').sort()
-  const arr2 = str2.split('').sort()
-  
-  if(arr1.length !== arr2.length) {
+  if(str1.length !== str2.length) {
     return false
   }
-
-  const isSame = arr1.every((element, index) => {
-    return element === arr2[index]
-  })  
-
-  return isSame
+         // V isSubstring
+  return (str1 + str1).includes(str2)
 }

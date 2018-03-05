@@ -110,11 +110,11 @@ export const rotateImage = (pixelMatrix) => {
 export const rotateImage_book = (matrix) => {
   if(matrix.length === 0 || matrix.length !== matrix[0].length) { return 'why are you even trying to fool give me some gosh darn data this is preposterous'}
 
-  let edge = matrix.length
+  let size = matrix.length
 
-  for(let layer = 0; layer < Math.floor(edge / 2); layer++) {
+  for(let layer = 0; layer < Math.floor(size / 2); layer++) {
     let first = layer
-    let last = edge - 1 - layer
+    let last = size - 1 - layer
 
     for(let i = first; i < last; i++) {
       let offset = i - first
